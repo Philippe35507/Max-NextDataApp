@@ -3,7 +3,7 @@ import { storePost } from "@/lib/posts";
 import { redirect } from "next/navigation";
 
 export default function NewPostPage() {
-  async function createPost(formData) {
+  async function createPost(prevState, formData) {
     "use server";
     const title = formData.get("title");
     const image = formData.get("image");
